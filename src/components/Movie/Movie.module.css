@@ -1,0 +1,38 @@
+.Movie {
+    position: relative;
+    width: 21.5vw;
+    height: 43vw;
+    display: inline-block;
+    vertical-align: top;
+    justify-content: center;
+    margin: 1vw;
+    overflow: hidden;
+    box-shadow: #00000024 4px 4px 20px 1px;
+}
+
+img {
+    height: 70%;
+    width: 100%;
+}
+
+.Title {
+    font-size: 20px;
+    margin: 2% 6%;
+}
+
+.Button {
+    display: inline-block;
+    float: left;
+
+    width: 70px;
+    height: 35px;
+
+    padding: 0.3em;
+    margin: 0.8em 1.5em;
+
+    background-color: rgba(48, 127, 230, 0.378);
+    text-decoration: none;
+
+    border-radius: 10%;
+    border: none;
+}

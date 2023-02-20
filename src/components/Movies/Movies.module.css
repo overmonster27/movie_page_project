@@ -1,0 +1,15 @@
+.Movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100px;
+
+    font-size: 30px;
+}
