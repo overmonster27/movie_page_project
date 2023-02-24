@@ -10,6 +10,7 @@ const moviesService = {
     getVideoById: (id) => axiosService.get(urls.getVideoById(id)),
     getMoviesByGenres:(page, genreIds)=> axiosService.get(urls.searchByGenres(page, genreIds)),
     getGenres: () => axiosService.get(urls.genres)
+
 };
 
 export {moviesService};

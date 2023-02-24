@@ -5,10 +5,7 @@
 
     height: 60px;
     width: 100%;
-
-    /*background: #30d2c5;*/
 }
-
 .User{
     display: flex;
     align-items: center;
