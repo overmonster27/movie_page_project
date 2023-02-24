@@ -1,57 +1,66 @@
-import css from './Movie.module.css'
+import {Rating} from "react-simple-star-rating";
+
+import css from './Movie.module.css';
 
 const MovieInfo = ({info}) => {
 
     let {
-        // adult,
-        // backdrop_path,
-        // belongs_to_collection,
-        // budget,
-        // genres,
-        // homepage,
-        // imdb_id,
-        // original_language,
+        title,
+        poster_path,
         original_title,
         overview,
-        // popularity,
-        poster_path,
-        // production_companies,
-        // production_countries,
-        // release_date,
-        // revenue,
-        // runtime,
-        // spoken_languages,
-        // status,
-        // tagline,
-        title,
-        // video,
-        // vote_average,
-        // vote_count,
+        budget,
+        runtime,
+        genres,
+        production_countries,
+        tagline,
+        homepage,
+        release_date,
+        status,
+        vote_average,
+        vote_count,
+        revenue,
     } = info;
 
-    return (
-        <div className={css.Movie}>
-            {info ? <>
-                <div>{title}</div>
-                <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={original_title}/>
-                <div>overview:{overview}</div>
-                {/*<div>budget:{budget}</div>*/}
-                {/*<div>genres:{genres}</div>*/}
-                {/*<div>homepage:{homepage}</div>*/}
-                {/*<div>original_language:{original_language}</div>*/}
-                {/*<div>original_title:{original_title}</div>*/}
-                {/*<div>production_countries:{production_countries}</div>*/}
-                {/*<div>production_companies:{production_companies}</div>*/}
-                {/*<div>release_date:{release_date}</div>*/}
-                {/*<div>revenue:{revenue}</div>*/}
-                {/*<div>runtime:{runtime}</div>*/}
-                {/*<div>status:{status}</div>*/}
-                {/*<div>tagline:{tagline}</div>*/}
-                {/*<div>vote_average:{vote_average}</div>*/}
-                {/*<div>vote_count:{vote_count}</div>*/}
-            </>: ''}
+    const innerGenres = genres.map((genre, index) => <h5 key={index}
+                                                         className="badge text-bg-primary">{genre.name}</h5>)
+    const innerProductionCountries = production_countries.map(country => country.name)
+
+    return (<div className={css.Container}>
+
+        <div className={css.Badge}>
+            <h1 style={{marginRight: '30px'}}>{title}</h1>
+            <span>{innerGenres}</span>
         </div>
-    );
+
+        <div className={css.Context}>
+            <img className={css.Img} src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={original_title}/>
+
+            <ul>
+                <li><b>Production_countries: </b>{innerProductionCountries}</li>
+                <li><b>Tagline: </b>{tagline}</li>
+                <li><b>Budget: </b>{budget}</li>
+                <li><b>Runtime: </b>{runtime}</li>
+                <li><b>Homepage: </b>{homepage}</li>
+                <li><b>Release date: </b>{release_date}</li>
+                <li><b>Status: </b>{status}</li>
+                <li><b>Original title: </b>{original_title}</li>
+                <li><b>Vote average: </b>{vote_average}</li>
+                <li><b>Vote count: </b>{vote_count}</li>
+                <li><b>Revenue: </b>{revenue}</li>
+
+                <li><b>Rating:</b>{<span><Rating
+                    size={24}
+                    initialValue={vote_average / 2}
+                    allowFraction={true}
+                    iconsCount={5}
+                    showTooltip={true}
+                /></span>}</li>
+
+                <li><b>Overview:</b>{overview}</li>
+            </ul>
+        </div>
+    </div>);
 };
 
 export {MovieInfo};

@@ -1,25 +1,26 @@
-import {MovieInfo} from "../../components/Movie/MovieInfo";
 import {useParams} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 
-import {useDispatch, useSelector} from "react-redux";
-import {moviesActions} from "../../redux/slices/movieSlice";
+import {Header, MovieInfo} from "../../components";
+import {moviesActions} from "../../redux";
 
 const MoviePage = () => {
 
-    const {id} = useParams()
+    const {id} = useParams();
 
     let {currentInfo} = useSelector(state => state.info);
-    
+
     let dispatch = useDispatch();
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(moviesActions.getMovieInfo({id}))
-    },[dispatch, id])
+    }, [dispatch, id]);
 
     return (
         <div>
-            <MovieInfo info={currentInfo}/>
+            <Header/>
+            {currentInfo && <MovieInfo info={currentInfo}/>}
         </div>
     );
 };
