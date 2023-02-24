@@ -13,5 +13,12 @@ body {
     --background-color: #b0d9ff;
     --text-color: #041526;
 }
+html {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Open_sea_%28july_2021%29.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 

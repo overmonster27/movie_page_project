@@ -8,6 +8,7 @@
     margin: 1vw;
     overflow: hidden;
     box-shadow: #00000024 4px 4px 20px 1px;
+    background-color: rgba(0,0,0,0.69);
 }
 
 img {
@@ -43,6 +44,9 @@ img {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+
+    padding-top: 70px;
+    background: #0000003d
 }
 
 .Img{
@@ -53,13 +57,24 @@ img {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+
+
 }
 ul{
     list-style: none;
+
+    padding-left: 15px;
+    margin: 20px;
 }
-li{
+.Text{
     font-size: large;
     margin-top: 10px;
+
+    color: #ffffff;
+    text-shadow: 0 0 5px black;
+}
+.Overview{
+    margin: 20px;
 }
 .Badge{
     display: flex;
@@ -71,4 +86,7 @@ li{
 }
 h5{
     margin-left: 5px;
+}
+.Rating{
+    margin: 15px;
 }

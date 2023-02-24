@@ -1,8 +1,22 @@
 import {Rating} from "react-simple-star-rating";
 
 import css from './Movie.module.css';
+import {useParams} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {moviesActions} from "../../redux";
+import {Videos} from "../Videos/Videos";
 
 const MovieInfo = ({info}) => {
+
+
+    const {id} = useParams();
+
+    let dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(moviesActions.getMovieInfo({id}))
+    }, [dispatch, id]);
 
     let {
         title,
@@ -37,19 +51,19 @@ const MovieInfo = ({info}) => {
             <img className={css.Img} src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={original_title}/>
 
             <ul>
-                <li><b>Production_countries: </b>{innerProductionCountries}</li>
-                <li><b>Tagline: </b>{tagline}</li>
-                <li><b>Budget: </b>{budget}</li>
-                <li><b>Runtime: </b>{runtime}</li>
-                <li><b>Homepage: </b>{homepage}</li>
-                <li><b>Release date: </b>{release_date}</li>
-                <li><b>Status: </b>{status}</li>
-                <li><b>Original title: </b>{original_title}</li>
-                <li><b>Vote average: </b>{vote_average}</li>
-                <li><b>Vote count: </b>{vote_count}</li>
-                <li><b>Revenue: </b>{revenue}</li>
+                <li className={css.Text}><b>Production_countries: </b>{innerProductionCountries}</li>
+                <li className={css.Text}><b>Tagline: </b>{tagline}</li>
+                <li className={css.Text}><b>Budget: </b>{budget}</li>
+                <li className={css.Text}><b>Runtime: </b>{runtime}</li>
+                <li className={css.Text}><b>Homepage: </b>{homepage}</li>
+                <li className={css.Text}><b>Release date: </b>{release_date}</li>
+                <li className={css.Text}><b>Status: </b>{status}</li>
+                <li className={css.Text}><b>Original title: </b>{original_title}</li>
+                <li className={css.Text}><b>Vote average: </b>{vote_average}</li>
+                <li className={css.Text}><b>Vote count: </b>{vote_count}</li>
+                <li className={css.Text}><b>Revenue: </b>{revenue}</li>
 
-                <li><b>Rating:</b>{<span><Rating
+                <li className={css.Text}><b>Rating:</b>{<span><Rating
                     size={24}
                     initialValue={vote_average / 2}
                     allowFraction={true}
@@ -57,9 +71,11 @@ const MovieInfo = ({info}) => {
                     showTooltip={true}
                 /></span>}</li>
 
-                <li><b>Overview:</b>{overview}</li>
+
             </ul>
         </div>
+        <div className={css.Text + ' ' +css.Overview}><b>Overview : </b>{overview}</div>
+        <Videos id={id}/>
     </div>);
 };
 

@@ -14,8 +14,6 @@ const Videos = ({id}) => {
         })
     }, [id])
 
-    console.log(id)
-
     const filteredVideos = videos.filter((video) => video.type === 'Trailer')
 
     return (

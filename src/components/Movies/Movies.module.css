@@ -11,6 +11,8 @@
     align-items: center;
 
     width: 70%;
+
+    margin-top: 70px;
 }
 .Pages{
     display: flex;
