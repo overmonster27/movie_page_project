@@ -24,7 +24,7 @@ const Header = ({withSearch}) => {
     const search = _.debounce(searchReq, 500, {'maxWait': 1000})
 
     return (
-        <div className={css.Header}>
+        <div className={css.Header} id='mainHeader'>
 
             <NavLink className={css.Home} to={`/`}>HOME</NavLink>
 
@@ -32,7 +32,7 @@ const Header = ({withSearch}) => {
                 {withSearch && <input onChange={search} placeholder={'Search'} type={"text"}/>}
             </div>
 
-            {/*<FilterBar/>*/}
+            <FilterBar/>
 
             <Theme/>
 

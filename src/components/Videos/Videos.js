@@ -1,22 +1,29 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
-import { moviesService } from "../../services/movieService";
+import {useEffect, useState} from "react";
 
-const Videos=()=>{
+import {moviesService} from "../../services";
 
-const {movieId}=useParams()
+import {Video} from "../Video/Video";
 
-    const {videos, setVideos}=useState([]);
+const Videos = ({id}) => {
 
+    const [videos, setVideos] = useState([]);
 
-    useEffect(()=>{
-        moviesService.getVideoById(movieId).then(({data})=> setVideos(data.results))
-    },[movieId])
+    useEffect(() => {
+        moviesService.getVideoById(id).then(({data}) => {
+            setVideos(data.results)
+        })
+    }, [id])
 
-    return(
+    console.log(id)
+
+    const filteredVideos = videos.filter((video) => video.type === 'Trailer')
+
+    return (
         <div>
-                {videos.map()}
+            {filteredVideos.map(video => <Video key={video.id} video={video}/>)}
         </div>
-    )
+    );
 }
-export {Videos}
+
+export {Videos};
+
