@@ -1,7 +1,7 @@
 .Movie {
     position: relative;
-    width: 15vw;
-    height: 29vw;
+    width: 220px;
+    /*height: 29vw;*/
     display: inline-block;
     vertical-align: top;
     justify-content: center;

@@ -56,6 +56,17 @@ const getMovieInfo = createAsyncThunk(
         }
     }
 );
+const searchMoviesByGenres = createAsyncThunk(
+    'moviesSlice/searchMoviesByGenres',
+    async ({page, genreIds}, {rejectWithValue}) => {
+        try {
+            const {data} = await moviesService.getMoviesByGenres(page, genreIds);
+            return data
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+        }
+    }
+);
 
 const getGenres = createAsyncThunk(
     'genresSlice/getGenresList',
@@ -99,6 +110,19 @@ const moviesSlice = createSlice({
                 state.errors = action.payload
             })
             .addCase(searchMovies.pending, (state) => {
+                state.loading = true
+            })
+            .addCase(searchMoviesByGenres.fulfilled, (state, action) => {
+                state.loading = false
+                const {page, results} = action.payload
+                state.page = page
+                state.movies = results
+            })
+            .addCase(searchMoviesByGenres.rejected, (state, action) => {
+                state.loading = false
+                state.errors = action.payload
+            })
+            .addCase(searchMoviesByGenres.pending, (state) => {
                 state.loading = true
             })
 
@@ -151,7 +175,8 @@ const {reducer: genresReducer} = genresSlice;
 const moviesActions = {
     getMovies,
     getMovieInfo,
-    searchMovies
+    searchMovies,
+    searchMoviesByGenres
 };
 
 const genresActions = {

@@ -4,6 +4,7 @@ import {useEffect} from "react";
 
 import {Header, MovieInfo} from "../../components";
 import {moviesActions} from "../../redux";
+import {Videos} from "../../components/Videos/Videos";
 
 const MoviePage = () => {
 
@@ -21,6 +22,7 @@ const MoviePage = () => {
         <div>
             <Header/>
             {currentInfo && <MovieInfo info={currentInfo}/>}
+            <Videos id={id}/>
         </div>
     );
 };

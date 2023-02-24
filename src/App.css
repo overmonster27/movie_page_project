@@ -1,6 +1,9 @@
-body{
+body {
     margin: 0;
+    background: var(--background-color);
+    color: var(--text-color);
 }
+
 :root[data-theme="light"] {
     --background-color: #ffffff;
     --text-color: #1C1E21;
@@ -11,7 +14,12 @@ body{
     --text-color: #f5f6f7;
 }
 
-body {
-    background: var(--background-color);
-    color: var(--text-color);
+#mainHeader[data-theme="light"] {
+    --background-color: #9f1313;
+    --text-color: #1a5ab7;
+}
+
+#mainHeader[data-theme="dark"] {
+    --background-color: #b0d9ff;
+    --text-color: #041526;
 }
