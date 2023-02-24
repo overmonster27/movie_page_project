@@ -1,6 +1,4 @@
-body{
-    margin: 0;
-}
+
 :root[data-theme="light"] {
     --background-color: #ffffff;
     --text-color: #1C1E21;
@@ -14,4 +12,7 @@ body{
 body {
     background: var(--background-color);
     color: var(--text-color);
+
+    margin: 0;
 }
+

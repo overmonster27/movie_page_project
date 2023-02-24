@@ -7,6 +7,7 @@ const moviesService = {
     getAll: (page = 1) => axiosService.get(urls.movies, {params: {page}}),
     getMovieById:(id)=> axiosService.get(urls.movie(id)),
     searchMovie:(page, query) => axiosService.get(urls.search(page, query)),
+    getVideoById: (id)=>axiosService.get(`/movie/${id}/videos`),
     getGenres: ()=> axiosService.get(urls.genres)
 };
 
