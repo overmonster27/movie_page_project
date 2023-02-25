@@ -14,7 +14,7 @@ const App = () => {
                         <Route index element={<MoviesPage/>}/>
                         <Route path={'/movie/:id'} element={<MoviePage/>}/>
                     </Route>
-                    <Route path={''} element={<NotFoundPage/>}/>
+                    <Route path={'*'} element={<NotFoundPage/>}/>
                 </Routes>
             </div>
         );

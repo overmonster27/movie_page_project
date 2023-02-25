@@ -1,7 +1,7 @@
 const NotFoundPage = () => {
  return (
   <div>
-   NotFoundPage
+<img src={'https://media.tenor.com/DuNmEvQUI3MAAAAd/starlord-fuck-you.gif'} alt={'NotFoundPage'}/>
   </div>
  );
 };

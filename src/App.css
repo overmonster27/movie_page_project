@@ -11,7 +11,7 @@ body {
 
 :root[data-theme="light"] {
     --background-color: #ffffff;
-    --background: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Open_sea_%28july_2021%29.jpg);
+    --background: url(https://phonoteka.org/uploads/posts/2021-05/1620997180_23-phonoteka_org-p-fon-more-solntse-plyazh-32.jpg);
     --text-color: #000000;
     --theme-icon-color: #dace06;
 }
@@ -22,4 +22,5 @@ body {
     --text-color: #ffffff;
     --theme-icon-color: #ffffff;
 }
+
 

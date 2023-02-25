@@ -1,9 +1,10 @@
 import Select from 'react-select';
-import {useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {genresActions, moviesActions} from "../../redux";
 import {useDispatch} from "react-redux";
 import {useSearchParams} from "react-router-dom";
+import {useSelector} from "react-redux";
+
+import {moviesActions} from "../../redux";
 
 const FilterBar = ({className}) => {
 

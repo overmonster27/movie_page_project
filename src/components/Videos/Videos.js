@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-
-import {moviesService} from "../../services";
+import {useParams} from "react-router-dom";
 
 import {Video} from "../Video/Video";
-import {useParams} from "react-router-dom";
+import {moviesService} from "../../services";
+import css from './Video.module.css';
 
 const Videos = () => {
 
@@ -20,7 +20,7 @@ const Videos = () => {
     const filteredVideos = videos.filter((video) => video.type === 'Trailer')
 
     return (
-        <div>
+        <div className={css.MovieContainer}>
             {filteredVideos.map(video => <Video key={video.id} video={video}/>)}
         </div>
     );

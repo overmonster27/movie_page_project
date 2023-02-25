@@ -16,11 +16,11 @@ const Movie = ({movie}) => {
                 <div className={css.Title}><b>{title}</b></div>
 
                 <Rating className={css.Rating}
-                    size={16}
-                    initialValue={vote_average / 2}
-                    allowFraction={true}
-                    iconsCount={5}
-                    showTooltip={true}
+                        size={16}
+                        initialValue={vote_average / 2}
+                        allowFraction={true}
+                        iconsCount={5}
+                        showTooltip={true}
                 />
 
             </div>
