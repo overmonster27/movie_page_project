@@ -4,9 +4,9 @@ import {moviesActions} from "../../redux";
 import _ from 'lodash';
 
 import {Theme} from "../Theme/Theme";
-import css from './Header.module.css';
 import {FilterBar} from "../FilterBar/FilterBar";
 
+import css from './Header.module.css';
 
 const Header = ({withSearch}) => {
 

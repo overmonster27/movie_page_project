@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 
 import {Video} from "../Video/Video";
 import {moviesService} from "../../services";
+
 import css from './Video.module.css';
 
 const Videos = () => {

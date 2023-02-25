@@ -4,3 +4,5 @@ export * from './Movie/Movie';
 export * from './Movie/MovieInfo';
 export * from './Movies/Movies';
 export * from './Theme/Theme';
+export * from './Video/Video';
+export * from './Videos/Videos';
