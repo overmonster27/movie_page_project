@@ -32,7 +32,7 @@ const Header = ({withSearch}) => {
                 {withSearch && <input onChange={search} placeholder={'Search'} type={"text"}/>}
             </div>
 
-            {withSearch && <FilterBar/>}
+            {withSearch && <FilterBar className={css.FilterBar}/>}
 
             <Theme/>
 

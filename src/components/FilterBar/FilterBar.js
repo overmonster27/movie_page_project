@@ -5,7 +5,7 @@ import {genresActions, moviesActions} from "../../redux";
 import {useDispatch} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 
-const FilterBar = () => {
+const FilterBar = ({className}) => {
 
     const dispatch = useDispatch();
 
@@ -42,7 +42,7 @@ const FilterBar = () => {
 
     return (
         <div>
-            <Select
+            <Select className={className}
                 defaultValue={selectedGenres}
                 onChange={setSelectedGenres}
                 options={options}

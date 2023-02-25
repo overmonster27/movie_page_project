@@ -1,22 +1,10 @@
 import {Rating} from "react-simple-star-rating";
 
 import css from './Movie.module.css';
-import {useParams} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {moviesActions} from "../../redux";
+
 import {Videos} from "../Videos/Videos";
 
 const MovieInfo = ({info}) => {
-
-
-    const {id} = useParams();
-
-    let dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(moviesActions.getMovieInfo({id}))
-    }, [dispatch, id]);
 
     let {
         title,
@@ -75,7 +63,7 @@ const MovieInfo = ({info}) => {
             </ul>
         </div>
         <div className={css.Text + ' ' +css.Overview}><b>Overview : </b>{overview}</div>
-        <Videos id={id}/>
+        <Videos/>
     </div>);
 };
 

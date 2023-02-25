@@ -20,15 +20,19 @@
     width: 50px;
 
     background: snow;
+    color: black;
 
     border-radius: 50%;
 }
 .Home{
     text-decoration: none;
     Color: #ffffff;
-    background: rgba(59, 12, 12, 0.51);
+
 
     padding: 5px;
 
     border-radius: 5px ;
+}
+.FilterBar{
+    min-width: 25vw;
 }

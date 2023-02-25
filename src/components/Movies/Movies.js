@@ -1,8 +1,5 @@
 import {useSelector} from "react-redux";
-// import {useSearchParams} from "react-router-dom";
-// import {useEffect} from "react";
-//
-// import {moviesActions} from "../../redux";
+
 import {Movie} from "../Movie/Movie";
 
 import css from './Movies.module.css'

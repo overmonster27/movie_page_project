@@ -3,8 +3,11 @@ import {useEffect, useState} from "react";
 import {moviesService} from "../../services";
 
 import {Video} from "../Video/Video";
+import {useParams} from "react-router-dom";
 
-const Videos = ({id}) => {
+const Videos = () => {
+
+    const {id} = useParams();
 
     const [videos, setVideos] = useState([]);
 

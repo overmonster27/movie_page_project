@@ -20,16 +20,16 @@
   &.light:before {
     animation-duration: 0.5s;
     animation-name: sun;
-    background-color: var(--text-color);
+    background-color: var(--theme-icon-color);
     border-radius: 50%;
-    box-shadow: 10px 0 0 -3.5px var(--text-color),
-    -10px 0 0 -3.5px var(--text-color),
-    0 -10px 0 -3.5px var(--text-color),
-    0 10px 0 -3.5px var(--text-color),
-    7px -7px 0 -3.5px var(--text-color),
-    7px 7px 0 -3.5px var(--text-color),
-    -7px 7px 0 -3.5px var(--text-color),
-    -7px -7px 0 -3.5px var(--text-color);
+    box-shadow: 10px 0 0 -3.5px var(--theme-icon-color),
+    -10px 0 0 -3.5px var(--theme-icon-color),
+    0 -10px 0 -3.5px var(--theme-icon-color),
+    0 10px 0 -3.5px var(--theme-icon-color),
+    7px -7px 0 -3.5px var(--theme-icon-color),
+    7px 7px 0 -3.5px var(--theme-icon-color),
+    -7px 7px 0 -3.5px var(--theme-icon-color),
+    -7px -7px 0 -3.5px var(--theme-icon-color);
     height: 10px;
     left: 7px;
     top: 7px;
@@ -50,7 +50,7 @@
     &:before {
       animation-duration: .5s;
       animation-name: moon;
-      background-color: var(--text-color);
+      background-color: var(--theme-icon-color);
       border-radius: 50%;
       height: 20px;
       left: 2px;
@@ -91,15 +91,15 @@
     0 0 0 -5px var(--background-color);
   }
   to {
-    background-color: var(--text-color);
-    box-shadow: 10px 0 0 -3.5px var(--text-color),
-    -10px 0 0 -3.5px var(--text-color),
-    0 -10px 0 -3.5px var(--text-color),
-    0 10px 0 -3.5px var(--text-color),
-    7px -7px 0 -3.5px var(--text-color),
-    7px 7px 0 -3.5px var(--text-color),
-    -7px 7px 0 -3.5px var(--text-color),
-    -7px -7px 0 -3.5px var(--text-color);
+    background-color: var(--theme-icon-color);
+    box-shadow: 10px 0 0 -3.5px var(--theme-icon-color),
+    -10px 0 0 -3.5px var(--theme-icon-color),
+    0 -10px 0 -3.5px var(--theme-icon-color),
+    0 10px 0 -3.5px var(--theme-icon-color),
+    7px -7px 0 -3.5px var(--theme-icon-color),
+    7px 7px 0 -3.5px var(--theme-icon-color),
+    -7px 7px 0 -3.5px var(--theme-icon-color),
+    -7px -7px 0 -3.5px var(--theme-icon-color);
   }
 }
 

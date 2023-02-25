@@ -1,24 +1,25 @@
 body {
     margin: 0;
-    background: var(--background-color);
+    background: var(--background);
     color: var(--text-color);
-}
 
-#mainHeader[data-theme="light"] {
-    --background-color: #9f1313;
-    --text-color: #1a5ab7;
-}
-
-#mainHeader[data-theme="dark"] {
-    --background-color: #b0d9ff;
-    --text-color: #041526;
-}
-html {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Open_sea_%28july_2021%29.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
 
+:root[data-theme="light"] {
+    --background-color: #ffffff;
+    --background: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Open_sea_%28july_2021%29.jpg);
+    --text-color: #000000;
+    --theme-icon-color: #dace06;
+}
+
+:root[data-theme="dark"] {
+    --background-color: rgb(10, 15, 91);
+    --background: url(https://oir.mobi/uploads/posts/2020-04/1585918772_11-p-morskie-volni-nochyu-26.jpg);
+    --text-color: #ffffff;
+    --theme-icon-color: #ffffff;
+}
 

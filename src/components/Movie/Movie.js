@@ -7,6 +7,7 @@ const Movie = ({movie}) => {
 
     const {id, title, original_title, poster_path, vote_average} = movie;
 
+
     return (<NavLink to={`/movie/${id}`}>
             <div className={css.Movie}>
 
